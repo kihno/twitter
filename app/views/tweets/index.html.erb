@@ -1,0 +1,7 @@
+<div class="mb-8">
+  <%= render "form" %>
+</div>
+
+<%= turbo_frame_tag "tweets" do %>
+  <%= render @tweets %>
+<% end %>
