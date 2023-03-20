@@ -1,0 +1,4 @@
+<%= turbo_stream.update_all(".#{dom_id(@likeable)}_likes") do %>
+  <%= render "likes/likes", likeable: @likeable %>
+<% end %>
+<%= turbo_stream.update_all(".#{dom_id(@likeable)}_likes-size", @likeable.likes.size) %>
