@@ -6,6 +6,12 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all.order(created_at: :desc)
   end
 
+  def show
+    @tweet = Tweet.find(params[:id])
+    @comment = Comment.new
+    @comments = @tweet.comments.order(created_at: :desc)
+  end
+
   def create
     @tweet = Tweet.new(tweet_params)
     @tweet.user = current_user
@@ -36,7 +42,7 @@ class TweetsController < ApplicationController
       if retweet.save
         format.turbo_stream
       else
-        format.html { redirect_back fallback_lcation: @tweet, alert: "Oops. Could not retweet."}
+        format.html { redirect_back fallback_location: @tweet, alert: "Oops. Could not retweet."}
       end
     end
   end
