@@ -8,7 +8,6 @@
     "autoprefixer": "^10.4.14",
     "esbuild": "^0.17.12",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
     "trix": "^2.0.4"
   },
   "scripts": {
@@ -19,6 +18,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.9"
+    "@tailwindcss/typography": "^0.5.9",
+    "tailwindcss": "^3.2.7"
   }
 }
